@@ -43,8 +43,7 @@ var GreasefireController = {
                        popup.firstChild);
 
     this._menuItem = document.createElementNS(this._XUL_NS, "menuitem");
-    this._menuItem.setAttribute("oncommand",
-                                "GreasefireController.openResults()");
+    this._menuItem.addEventListener("oncommand", GreasefireController.openResults, true);
 
     popup.insertBefore(this._menuItem, popup.firstChild);
 

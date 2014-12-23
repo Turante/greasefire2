@@ -9,8 +9,9 @@
 >
 #filter substitution
   <Description about="urn:mozilla:install-manifest">
-    <em:id>greasefire@skrul.com</em:id>
-    <em:version>1.0.8</em:version>
+    <em:id>greasefire2@b0nk3rz.net</em:id>
+    <em:version>2.0.0</em:version>
+    <em:type>2</em:type>
 
     <em:targetApplication>
       <!-- Firefox -->
@@ -21,11 +22,14 @@
       </Description>
     </em:targetApplication>
 
-    <em:name>Greasefire</em:name>
-    <em:creator>Steve Krulewitz</em:creator>
-    <em:description>Automatically find Greasemonkey scripts on Userscripts.org</em:description>
+    <em:name>Greasefire2</em:name>
+    <em:creator>B0nk3rZ</em:creator>
+    <em:homepageURL>http://www.b0nk3rz.net/</em:homepageURL>
+    <em:description>Automatically find Greasemonkey scripts on userscripts-mirror.org</em:description>
     <em:optionsURL>chrome://greasefire/content/prefs.xul</em:optionsURL>
 
+    <em:contributor>Original creator: skrul (Steve Krulewitz)</em:contributor>
+    <em:contributor>frog23 (http://frog23.net/) for supplying the latest index</em:contributor>
     <em:contributor>Flame images from Foxkeh's Blog (http://www.foxkeh.com)</em:contributor>
     <em:contributor>Erik Vold (http://erikvold.com)</em:contributor>
     <em:contributor>Greg Parris (http://phob.net)</em:contributor>

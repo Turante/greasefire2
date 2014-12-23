@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zip \
-  greasefire.xpi \
+  greasefire2.xpi \
   install.rdf \
   icon.png \
   chrome.manifest \
@@ -12,5 +12,5 @@ zip \
   indexes/*
 
 if [[ "test" != "$1" ]]; then
-  zip -d greasefire.xpi chrome/content/test/ chrome/content/test/*
+  zip -d greasefire2.xpi chrome/content/test/ chrome/content/test/*
 fi

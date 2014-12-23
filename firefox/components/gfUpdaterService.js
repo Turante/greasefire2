@@ -62,7 +62,7 @@ function gfUpdaterService__startup()
 
   this._gfs = Cc["@skrul.com/greasefire/service;1"].getService().wrappedJSObject;
 
-  this._prefs = Services.prefs.getBranch("greasefire.");
+  this._prefs = Services.prefs.getBranch("extensions.greasefire.");
 
   // If we are overdue for an update at startup, push it a minute in the future
   // so we don't slow down startup
