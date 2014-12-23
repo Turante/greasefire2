@@ -30,7 +30,7 @@ function runTest() {
 
   if (method == 1 || method == 2) {
     var file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsILocalFile);
-    file.initWithPath("/home/steve/dev/greasefire/index.dat");
+    file.initWithPath("/home/steve/dev/greasefire2/index.dat");
 
     var fis = Cc["@mozilla.org/network/file-input-stream;1"]
     .createInstance(Ci.nsIFileInputStream);
@@ -50,7 +50,7 @@ function runTest() {
   }
   else {
     Services.scriptloader
-        .loadSubScript("file:///home/steve/dev/greasefire/index.json", o);
+        .loadSubScript("file:///home/steve/dev/greasefire2/index.json", o);
   }
 
   var d = Date.now() - t;

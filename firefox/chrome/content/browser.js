@@ -15,7 +15,7 @@ var GreasefireController = {
 
   init: function() {
     XPCOMUtils.defineLazyGetter(this, "_gfs", function() {
-      return Cc["@skrul.com/greasefire/service;1"].getService().wrappedJSObject;
+      return Cc["@b0nk3rz.net/greasefire2/service;1"].getService().wrappedJSObject;
     });
 
     window.addEventListener("load", this, false);
@@ -43,7 +43,7 @@ var GreasefireController = {
                        popup.firstChild);
 
     this._menuItem = document.createElementNS(this._XUL_NS, "menuitem");
-    this._menuItem.addEventListener("oncommand", GreasefireController.openResults, true);
+    this._menuItem.addEventListener("command", function (event){GreasefireController.openResults();}, false);
 
     popup.insertBefore(this._menuItem, popup.firstChild);
 
@@ -77,7 +77,7 @@ var GreasefireController = {
       currentURI: this._currentURI
     };
 
-    openDialog("chrome://greasefire/content/picker.xul",
+    openDialog("chrome://greasefire2/content/picker.xul",
                "",
                "chrome,dialog=no,resizable",
                params);

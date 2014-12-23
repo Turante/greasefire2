@@ -11,8 +11,8 @@ function $(id) {
 
 var PrefsController = {
 
-  _gfs: Cc["@skrul.com/greasefire/service;1"].getService().wrappedJSObject,
-  _up: Cc["@skrul.com/greasefire/updater;1"].getService().wrappedJSObject,
+  _gfs: Cc["@b0nk3rz.net/greasefire2/service;1"].getService().wrappedJSObject,
+  _up: Cc["@b0nk3rz.net/greasefire2/updater;1"].getService().wrappedJSObject,
 
   init: function PrefsController_init() {
     $("days").value = this._up.updateIntervalMinutes / 1440; // (1440 = 24 * 60)

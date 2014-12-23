@@ -9,10 +9,10 @@ Cu.import("resource://gre/modules/Services.jsm");
 function runTest() {
   var mainThread = Services.tm.mainThread;
 
-  var gfs = Cc["@skrul.com/greasefire/service;1"]
+  var gfs = Cc["@b0nk3rz.net/greasefire2/service;1"]
               .getService(Ci.gfIGreasefireService);
 
-  var u = Cc["@skrul.com/greasefire/updater;1"]
+  var u = Cc["@b0nk3rz.net/greasefire2/updater;1"]
             .getService(Ci.gfIUpdaterService);
 
   log("index date" + (new Date(gfs.indexDate)));

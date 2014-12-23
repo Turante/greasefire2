@@ -52,7 +52,7 @@ function gfUpdaterService() {
 gfUpdaterService.prototype = {
   classDescription: "Greasefire Updater Service",
   classID:          Components.ID("{7c5b9317-0b18-4390-9a0a-a594d544a99f}"),
-  contractID:       "@skrul.com/greasefire/updater;1"
+  contractID:       "@b0nk3rz.net/greasefire2/updater;1"
 }
 
 gfUpdaterService.prototype._startup =
@@ -60,9 +60,9 @@ function gfUpdaterService__startup()
 {
   d("startup");
 
-  this._gfs = Cc["@skrul.com/greasefire/service;1"].getService().wrappedJSObject;
+  this._gfs = Cc["@b0nk3rz.net/greasefire2/service;1"].getService().wrappedJSObject;
 
-  this._prefs = Services.prefs.getBranch("extensions.greasefire.");
+  this._prefs = Services.prefs.getBranch("extensions.greasefire2.");
 
   // If we are overdue for an update at startup, push it a minute in the future
   // so we don't slow down startup
@@ -110,7 +110,7 @@ function gfUpdaterService__processDownload()
     });
 
     var exDir = Services.dirsvc.get("ProfD", Ci.nsIFile);
-    exDir.append("greasefire@skrul.com");
+    exDir.append("greasefire2@b0nk3rz.net");
 
     var unpackDir = exDir.clone();
     unpackDir.append("indexes.new");
@@ -129,7 +129,7 @@ function gfUpdaterService__processDownload()
     backupDir.append("indexes.backup");
     backupDir.createUnique(Ci.nsIFile.DIRECTORY_TYPE, 0755);
 
-    // Stop the greasefire service and move the dirs around
+    // Stop the greasefire2 service and move the dirs around
     this._gfs.shutdown();
     try {
       if (oldIndexDir.exists()) {
@@ -222,7 +222,7 @@ function gfUpdaterService_startUpdate(aForce)
 
     // Create a destination file for the download
     this._dest = Services.dirsvc.get("TmpD", Ci.nsIFile);
-    this._dest.append("greasefire_index_download.jar");
+    this._dest.append("greasefire2_index_download.jar");
     this._dest.createUnique(Ci.nsIFile.NORMAL_FILE_TYPE, 0666);
 
     // Start the download

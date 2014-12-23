@@ -8,7 +8,7 @@ Cu.import("resource://gre/modules/Services.jsm");
 
 function runTest() {
 
-  var gfs = Cc["@skrul.com/greasefire/service;1"]
+  var gfs = Cc["@b0nk3rz.net/greasefire2/service;1"]
               .getService(Ci.gfIGreasefireService);
 
   var uri = Services.io.newURI("http://www.google.com", null, null);
@@ -22,7 +22,7 @@ function runTest() {
   params.objects = array;
 
   Services.ww.openWindow(null,
-                         "chrome://greasefire/content/picker.xul",
+                         "chrome://greasefire2/content/picker.xul",
                          "_blank",
                          "chrome,all,dialog,modal,dialog=no",
                          params);

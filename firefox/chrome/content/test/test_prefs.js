@@ -8,7 +8,7 @@ Cu.import("resource://gre/modules/Services.jsm");
 
 function runTest() {
   Services.ww.openWindow(null,
-                         "chrome://greasefire/content/prefs.xul",
+                         "chrome://greasefire2/content/prefs.xul",
                          "_blank",
                          "chrome,all,dialog,modal,centerscreen",
                          null);

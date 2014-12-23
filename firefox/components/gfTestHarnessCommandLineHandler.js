@@ -61,7 +61,7 @@ function gfTestHarnessCommandLineHandler()
 gfTestHarnessCommandLineHandler.prototype = {
   classDescription: "Test Harness Command Line Handler",
   classID:           Components.ID("{0c1b14b2-4a2c-4ba4-bf38-0f6844439986}"),
-  contractID:        "@skrul.com/greasefire/testharness/commandlinehandler;1"
+  contractID:        "@b0nk3rz.net/greasefire2/testharness/commandlinehandler;1"
 }
 
 gfTestHarnessCommandLineHandler.prototype.handle =
@@ -91,14 +91,14 @@ function gfTestHarnessCommandLineHandler_handle(aCommandLine)
 gfTestHarnessCommandLineHandler.prototype._runTest =
 function gfTestHarnessCommandLineHandler__runTest(aPath)
 {
-  var consoleListener = Cc["@skrul.com/greasefire/testharness/consolelistener;1"]
+  var consoleListener = Cc["@b0nk3rz.net/greasefire2/testharness/consolelistener;1"]
                           .createInstance(Ci.nsIConsoleListener);
   Services.console.registerListener(consoleListener);
 
   var o = new gfTestHarnessRunEnvironment();
   var shouldQuit = true;
 
-  var url = "chrome://greasefire/content/test/" + aPath;
+  var url = "chrome://greasefire2/content/test/" + aPath;
   Services.console.logStringMessage("Running test at '" + url + "'");
 
   try {
@@ -132,7 +132,7 @@ function gfTestHarnessConsoleListener()
 gfTestHarnessConsoleListener.prototype = {
   classDescription: "Test Harness Console Listener",
   classID:           Components.ID("{52b17aee-2705-42e0-bf2d-92afb900c4c8}"),
-  contractID:        "@skrul.com/greasefire/testharness/consolelistener;1",
+  contractID:        "@b0nk3rz.net/greasefire2/testharness/consolelistener;1",
   observe: function(aMessage) {
     dump("[console] " + aMessage.message + "\n");
   }

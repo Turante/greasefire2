@@ -10,7 +10,7 @@ function GF_Trim(s) {
   return s.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
 }
 
-const US_BASE = Cc["@skrul.com/greasefire/updater;1"].getService().wrappedJSObject._prefs.getCharPref("us_mirror");
+const US_BASE = Cc["@b0nk3rz.net/greasefire2/updater;1"].getService().wrappedJSObject._prefs.getCharPref("us_mirror");
 
 function $(id) {
   return document.getElementById(id);
@@ -134,7 +134,7 @@ var PickerController = {
         var url = Services.io.newURI(currentUrl, null, null);
         var absolute = url.resolve(href);
 
-        // Append source=greasefire so we can track clicks back to the
+        // Append source=greasefire2 so we can track clicks back to the
         // main site.
         absolute += absolute.indexOf("?") == -1 ? "?" : "&";
         absolute += "source=greasefire";

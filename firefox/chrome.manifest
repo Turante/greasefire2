@@ -1,21 +1,21 @@
-skin greasefire classic/1.0 chrome/content/
-overlay chrome://browser/content/browser.xul chrome://greasefire/content/browser.xul
-content greasefire chrome/content/
+skin greasefire2 classic/1.0 chrome/content/
+overlay chrome://browser/content/browser.xul chrome://greasefire2/content/browser.xul
+content greasefire2 chrome/content/
 
 component {7c5b9317-0b18-4390-9a0a-a594d544a99f} components/gfUpdaterService.js
-contract @skrul.com/greasefire/updater;1 {7c5b9317-0b18-4390-9a0a-a594d544a99f}
-category profile-after-change @skrul.com/greasefire/updater;1 @skrul.com/greasefire/updater;1
+contract @b0nk3rz.net/greasefire2/updater;1 {7c5b9317-0b18-4390-9a0a-a594d544a99f}
+category profile-after-change @b0nk3rz.net/greasefire2/updater;1 @b0nk3rz.net/greasefire2/updater;1
 
 component {d647ff9b-ac4c-4d0e-8fbd-484765be5549} components/gfGreasefireService.js
-contract @skrul.com/greasefire/service;1 {d647ff9b-ac4c-4d0e-8fbd-484765be5549}
-category profile-after-change @skrul.com/greasefire/service;1 @skrul.com/greasefire/service;1
+contract @b0nk3rz.net/greasefire2/service;1 {d647ff9b-ac4c-4d0e-8fbd-484765be5549}
+category profile-after-change @b0nk3rz.net/greasefire2/service;1 @b0nk3rz.net/greasefire2/service;1
 
 component {0c1b14b2-4a2c-4ba4-bf38-0f6844439986} components/gfTestHarnessCommandLineHandler.js
-contract @skrul.com/greasefire/testharness/commandlinehandler;1 {0c1b14b2-4a2c-4ba4-bf38-0f6844439986}s
-category command-line-handler @skrul.com/greasefire/testharness/commandlinehandler;1 @skrul.com/greasefire/testharness/commandlinehandler;1
+contract @b0nk3rz.net/greasefire2/testharness/commandlinehandler;1 {0c1b14b2-4a2c-4ba4-bf38-0f6844439986}s
+category command-line-handler @b0nk3rz.net/greasefire2/testharness/commandlinehandler;1 @b0nk3rz.net/greasefire2/testharness/commandlinehandler;1
 
 component {52b17aee-2705-42e0-bf2d-92afb900c4c8} components/gfTestHarnessCommandLineHandler.js
-contract @skrul.com/greasefire/testharness/consolelistener;1 {52b17aee-2705-42e0-bf2d-92afb900c4c8}
+contract @b0nk3rz.net/greasefire2/testharness/consolelistener;1 {52b17aee-2705-42e0-bf2d-92afb900c4c8}
 
-overlay    chrome://greasefire/content/prefs.xul chrome://greasefire/content/closewindow.xul
-overlay    chrome://greasefire/content/picker.xul chrome://greasefire/content/closewindow.xul
+overlay    chrome://greasefire2/content/prefs.xul chrome://greasefire2/content/closewindow.xul
+overlay    chrome://greasefire2/content/picker.xul chrome://greasefire2/content/closewindow.xul

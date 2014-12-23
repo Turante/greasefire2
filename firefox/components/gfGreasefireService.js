@@ -22,7 +22,7 @@ function GF_GetIndexesDir(aCallback) {
     return aCallback(indexesDir.clone());
   }
 
-  var addonID = "greasefire@skrul.com";
+  var addonID = "greasefire2@b0nk3rz.net";
   var file = Services.dirsvc.get("ProfD", Ci.nsIFile);
   file.append(addonID);
   var profDir = file.clone();
@@ -87,7 +87,7 @@ function gfGreasefireService()
 gfGreasefireService.prototype = {
   classDescription: "Greasefire Service",
   classID:          Components.ID("{d647ff9b-ac4c-4d0e-8fbd-484765be5549}"),
-  contractID:       "@skrul.com/greasefire/service;1"
+  contractID:       "@b0nk3rz.net/greasefire2/service;1"
 }
 
 gfGreasefireService.prototype.startup =

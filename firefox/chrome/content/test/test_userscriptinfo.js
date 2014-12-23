@@ -4,7 +4,7 @@ Cu.import("resource://gre/modules/Services.jsm");
 
 function runTest() {
 
-  var usis = Cc["@skrul.com/greasefire/userscript-info-service;1"]
+  var usis = Cc["@b0nk3rz.net/greasefire2/userscript-info-service;1"]
                .getService(Ci.gfIUserScriptInfoService);
 
   var obs = {
@@ -20,7 +20,7 @@ function runTest() {
   usis.request(24556, obs);
 
   Services.ww.openWindow(null,
-                         "chrome://greasefire/content/results.xul",
+                         "chrome://greasefire2/content/results.xul",
                          "_blank",
                          "chrome,all,dialog=no",
                          null);

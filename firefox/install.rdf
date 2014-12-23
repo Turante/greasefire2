@@ -10,7 +10,7 @@
 #filter substitution
   <Description about="urn:mozilla:install-manifest">
     <em:id>greasefire2@b0nk3rz.net</em:id>
-    <em:version>2.0.0</em:version>
+    <em:version>2.0.2</em:version>
     <em:type>2</em:type>
 
     <em:targetApplication>
@@ -18,7 +18,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>4.0</em:minVersion>
-        <em:maxVersion>15.0a1</em:maxVersion>
+        <em:maxVersion>34.*</em:maxVersion>
       </Description>
     </em:targetApplication>
 
@@ -26,7 +26,7 @@
     <em:creator>B0nk3rZ</em:creator>
     <em:homepageURL>http://www.b0nk3rz.net/</em:homepageURL>
     <em:description>Automatically find Greasemonkey scripts on userscripts-mirror.org</em:description>
-    <em:optionsURL>chrome://greasefire/content/prefs.xul</em:optionsURL>
+    <em:optionsURL>chrome://greasefire2/content/prefs.xul</em:optionsURL>
 
     <em:contributor>Original creator: skrul (Steve Krulewitz)</em:contributor>
     <em:contributor>frog23 (http://frog23.net/) for supplying the latest index</em:contributor>

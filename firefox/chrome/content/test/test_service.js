@@ -22,7 +22,7 @@ function runTest() {
     "http://www.mozilla.org"
   ];
 
-  var gfs = Cc["@skrul.com/greasefire/service;1"]
+  var gfs = Cc["@b0nk3rz.net/greasefire2/service;1"]
               .getService(Ci.gfIGreasefireService);
 
   for (var i = 0; i < urls.length; i++) {
