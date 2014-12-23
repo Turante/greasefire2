@@ -4,3 +4,4 @@
  */
 pref("greasefire.update_interval_minutes", 10080);
 pref("greasefire.update_url", "http://skrul.com/projects/greasefire/update.php");
+pref("greasefire.us_mirror", "http://userscripts-mirror.org/scripts/");

@@ -65,5 +65,9 @@
       </vbox>
     </hbox>
   </hbox>
+  <hbox flex="1">
+    <label value="Userscripts mirror " />
+    <textbox id="us_mirror" type="text" onchange="PrefsController.updateMirror(this.value)" /> 
+  </hbox>
 </groupbox>
 </dialog>

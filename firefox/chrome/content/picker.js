@@ -10,7 +10,7 @@ function GF_Trim(s) {
   return s.replace(/^\s\s*/, "").replace(/\s\s*$/, "");
 }
 
-const US_BASE = "http://greasefire.userscripts.org/scripts/";
+const US_BASE = Cc["@skrul.com/greasefire/updater;1"].getService().wrappedJSObject._prefs.getCharPref("us_mirror");
 
 function $(id) {
   return document.getElementById(id);

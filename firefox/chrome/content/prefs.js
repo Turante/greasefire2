@@ -16,7 +16,7 @@ var PrefsController = {
 
   init: function PrefsController_init() {
     $("days").value = this._up.updateIntervalMinutes / 1440; // (1440 = 24 * 60)
-
+    $("us_mirror").value = this._up._prefs.getCharPref("us_mirror");
     this._up.addListener(this);
     this._updateDisplay();
   },
@@ -57,8 +57,12 @@ var PrefsController = {
     this._updateDisplay();
   },
 
+  updateMirror: function (aMirror) {
+    this._up._prefs.setCharPref("us_mirror", aMirror);
+  },
+
   onUpdateStarted: function () {
-    $("status").value = "Connecting..."
+    $("status").value = "Connecting...";
     this._updateDisplay();
   },
 
