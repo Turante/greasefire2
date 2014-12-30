@@ -7,9 +7,9 @@ Most of the work is from the original author skrul.
 
 #### Downloads
 
-The original Firefox extension can be downloaded at https://addons.mozilla.org/en-US/firefox/addon/greasefire/
+Greasefire2 for Firefox: https://addons.mozilla.org/en-US/firefox/addon/greasefire2/
 
-The new on will follow soon.
+The original Firefox extension can be downloaded at https://addons.mozilla.org/en-US/firefox/addon/greasefire/
 
 The Chrome extension is not yet complete, but grab the source and give it a try!
 
