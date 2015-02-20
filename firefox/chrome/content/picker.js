@@ -324,7 +324,4 @@ ResultsView.prototype = {
   isSorted: function () { return false; },
   getLevel: function (row) { return 0; },
   getImageSrc: function (row, col) { return null; },
-  getRowProperties: function (row, props) {},
-  getCellProperties: function (row, col, props) {},
-  getColumnProperties: function (colid, col, props) {}
 };

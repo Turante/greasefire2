@@ -61,9 +61,12 @@ var GreasefireController = {
     this._menuItem.setAttribute("disabled", count == 0);
 
     if (this._toolbutton) {
-      if (count > 0)
+      if (count > 0){
         this._toolbutton.classList.add("tbb-scripts-available");
-      else
+	var _prefs = Services.prefs.getBranch("extensions.greasefire2.");
+	if(_prefs.getCharPref('notification_sound_path') != "")
+          new Audio(_prefs.getCharPref('notification_sound_path')).play();
+      }else
         this._toolbutton.classList.remove("tbb-scripts-available");
     }
   },

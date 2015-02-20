@@ -13,10 +13,14 @@ var PrefsController = {
 
   _gfs: Cc["@b0nk3rz.net/greasefire2/service;1"].getService().wrappedJSObject,
   _up: Cc["@b0nk3rz.net/greasefire2/updater;1"].getService().wrappedJSObject,
+  filePicker: Cc["@mozilla.org/filepicker;1"].createInstance(Ci.nsIFilePicker),
 
   init: function PrefsController_init() {
     $("days").value = this._up.updateIntervalMinutes / 1440; // (1440 = 24 * 60)
     $("us_mirror").value = this._up._prefs.getCharPref("us_mirror");
+    $("notificationSound").value = this._up._prefs.getCharPref("notification_sound_path");
+    $("useNotification").checked = (this._up._prefs.getCharPref("notification_sound_path") != "");
+    if(this._up._prefs.getCharPref("notification_sound_path") == "") $('nsBrowser').setAttribute('disabled','true');
     this._up.addListener(this);
     this._updateDisplay();
   },
@@ -59,6 +63,26 @@ var PrefsController = {
 
   updateMirror: function (aMirror) {
     this._up._prefs.setCharPref("us_mirror", aMirror);
+  },
+
+  updateNotificationSoundCheckbox: function (aChecked){
+    if(!aChecked){
+      $('nsBrowser').setAttribute('disabled', 'true');
+      $('notificationSound').value="";
+      this._up._prefs.setCharPref('notification_sound_path', "");
+    }else
+      $('nsBrowser').removeAttribute('disabled');
+  },
+
+  updateNotificationSound: function (filePath){
+      this._up._prefs.setCharPref('notification_sound_path', filePath);
+  },
+
+  getSoundFileBrowser: function (){
+    var window = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator).getMostRecentWindow("navigator:browser");
+    this.filePicker.init(window, "Select notification sound file..", Ci.nsIFilePicker.modeOpen);
+    this.filePicker.appendFilters(Ci.nsIFilePicker.filterAudio); //filterAudio
+    return this.filePicker;
   },
 
   onUpdateStarted: function () {

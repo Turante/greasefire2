@@ -3,5 +3,5 @@
  * Licensed under GPLv2 or later, see file LICENSE in the xpi for details.
  */
 .tbb-scripts-available .toolbarbutton-icon {
-  background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%);
+  background: linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%);
 }

@@ -9,7 +9,7 @@
    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
    xmlns:xhtml="http://www.w3.org/1999/xhtml"
    width="500"
-   height="300"
+   height="400"
    onload="PrefsController.init();"
    onunload="PrefsController.unload();"
    buttons="accept"
@@ -20,6 +20,14 @@
   type="application/x-javascript"
   src="chrome://greasefire2/content/prefs.js"
 />
+<script type="application/x-javascript">
+  function nsBrowserCallback(aResult){
+    if(aResult==0){ //Ci.nsIFilePicker.returnOK
+      $('notificationSound').value=PrefsController.filePicker.fileURL.spec;
+      PrefsController.updateNotificationSound(PrefsController.filePicker.fileURL.spec);
+    }
+  }
+</script>
 <groupbox>
   <caption label="Index Details"/>
   <hbox>
@@ -69,5 +77,11 @@
     <label value="Userscripts mirror " />
     <textbox id="us_mirror" type="text" size="40" onchange="PrefsController.updateMirror(this.value)" /> 
   </hbox>
+  <hbox flex="1" align="center">
+    <checkbox id="useNotification" label="Play notification sound: " oncommand="PrefsController.updateNotificationSoundCheckbox(this.checked)" />
+    <textbox id="notificationSound" type="text" size="40" disabled="true" />
+    <button id="nsBrowser" label="Select file..." oncommand="PrefsController.getSoundFileBrowser().open(nsBrowserCallback)" />
+  </hbox>
+
 </groupbox>
 </dialog>
