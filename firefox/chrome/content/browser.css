@@ -4,4 +4,5 @@
  */
 .tbb-scripts-available .toolbarbutton-icon {
   background: linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%);
+  background: -moz-linear-gradient(top, #f2825b 0%, #e55b2b 50%, #f07146 100%);
 }
