@@ -16,12 +16,12 @@ var PrefsController = {
   filePicker: Cc["@mozilla.org/filepicker;1"].createInstance(Ci.nsIFilePicker),
 
   init: function PrefsController_init() {
-    $("days").value = this._up.updateIntervalMinutes / 1440; // (1440 = 24 * 60)
+    //$("days").value = this._up.updateIntervalMinutes / 1440; // (1440 = 24 * 60)
     $("us_mirror").value = this._up._prefs.getCharPref("us_mirror");
     $("notificationSound").value = this._up._prefs.getCharPref("notification_sound_path");
     $("useNotification").checked = (this._up._prefs.getCharPref("notification_sound_path") != "");
     if(this._up._prefs.getCharPref("notification_sound_path") == "") $('nsBrowser').setAttribute('disabled','true');
-    this._up.addListener(this);
+    //this._up.addListener(this);
     this._updateDisplay();
   },
 

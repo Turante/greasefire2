@@ -204,7 +204,8 @@ function gfUpdaterService__notify(aFunc)
 
 gfUpdaterService.prototype.startUpdate =
 function gfUpdaterService_startUpdate(aForce)
-{
+{ return;
+/*
   if (this._isUpdating) {
     return;
   }
@@ -245,7 +246,7 @@ function gfUpdaterService_startUpdate(aForce)
     Cu.reportError(e);
     this._updateFinished(Cr.NS_ERROR_FAILURE, e.message);
   }
-
+*/
 }
 
 gfUpdaterService.prototype.cancelUpdate =

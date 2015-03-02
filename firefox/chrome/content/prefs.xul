@@ -9,12 +9,12 @@
    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
    xmlns:xhtml="http://www.w3.org/1999/xhtml"
    width="500"
-   height="400"
+   height="200"
    onload="PrefsController.init();"
    onunload="PrefsController.unload();"
    buttons="accept"
    buttonlabelaccept="Close"
-   title="Greasefire Preferences"
+   title="Greasefire2 Preferences"
 >
 <script
   type="application/x-javascript"
@@ -28,6 +28,7 @@
     }
   }
 </script>
+<!--
 <groupbox>
   <caption label="Index Details"/>
   <hbox>
@@ -39,7 +40,9 @@
     <label id="script-count"/>
   </hbox>
 </groupbox>
+-->
 <groupbox>
+<!--
   <caption label="Index Updates"/>
   <hbox align="center">
     <checkbox
@@ -73,6 +76,7 @@
       </vbox>
     </hbox>
   </hbox>
+-->
   <hbox flex="1" align="center">
     <label value="Userscripts mirror " />
     <textbox id="us_mirror" type="text" size="40" onchange="PrefsController.updateMirror(this.value)" /> 
