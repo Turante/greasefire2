@@ -1,16 +1,9 @@
-<?xml version="1.0"?>
-<!--
-  Copyright (C) 2008 by Steve Krulewitz <skrulx@gmail.com>
-  Licensed under GPLv2 or later, see file LICENSE in the xpi for details.
--->
-<RDF
-  xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:em="http://www.mozilla.org/2004/em-rdf#"
->
+<?xml version='1.0' encoding='utf-8'?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 #filter substitution
   <Description about="urn:mozilla:install-manifest">
     <em:id>greasefire2@b0nk3rz.net</em:id>
-    <em:version>2.1.0</em:version>
+    <em:version>2.1.1</em:version>
     <em:type>2</em:type>
 
     <em:targetApplication>
@@ -34,5 +27,6 @@
     <em:contributor>Erik Vold (http://erikvold.com)</em:contributor>
     <em:contributor>Greg Parris (http://phob.net)</em:contributor>
     <em:contributor>Tony Wang ( https://www.masterbranch.com/developer/tonyq.wang )</em:contributor>
+	<em:contributor>Quicksaver (https://github.com/Quicksaver) - Compatibility with CustomizableUI (Puzzle Toolbars)</em:contributor>
   </Description>
 </RDF>
