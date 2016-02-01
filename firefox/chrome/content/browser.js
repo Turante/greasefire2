@@ -91,8 +91,18 @@ var GreasefireController = {
     case "load":
       window.addEventListener("aftercustomization", this, false);
       gBrowser.addProgressListener(this);
+      CustomizableUI.addListener(this);
       // no break
     case "aftercustomization":
+      this._setupMenu();
+      break;
+    }
+  },
+
+  onWidgetAfterDOMChange: function(aNode) {
+    switch(aNode.id) {
+    case "greasemonkey-tbb":
+    case "scriptish-button":
       this._setupMenu();
       break;
     }
